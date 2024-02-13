@@ -1,5 +1,4 @@
-import { IsEmail } from "class-validator"
-import { IsString, MinLength } from "class-validator/types/decorator/decorators"
+import { IsEmail, IsString, MinLength } from "class-validator"
 
 
 export class AuthDto {
