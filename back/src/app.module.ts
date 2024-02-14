@@ -1,9 +1,19 @@
-import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { AuthModule } from './auth/auth.module';
-import { UserModule } from './user/user.module';
+import { Module } from '@nestjs/common'
+import { ConfigModule } from '@nestjs/config'
+import { AuthModule } from './auth/auth.module'
+import { PomodoroModule } from './pomodoro/pomodoro.module'
+import { TaskModule } from './task/task.module'
+import { TimeBlockModule } from './time_block/time_block.module'
+import { UserModule } from './user/user.module'
 
 @Module({
-  imports: [ConfigModule.forRoot() ,AuthModule, UserModule],
+	imports: [
+		ConfigModule.forRoot(),
+		AuthModule,
+		UserModule,
+		TaskModule,
+		TimeBlockModule,
+    PomodoroModule
+	]
 })
 export class AppModule {}
