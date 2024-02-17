@@ -1,5 +1,8 @@
 'use client'
 
+import { Button } from '@/components/ui/buttons/Button'
+import { Field } from '@/components/ui/fields/Field'
+import { Heading } from '@/components/ui/Heading'
 import { DASHBOARD_PAGES } from '@/config/pages-url.config'
 import { authService } from '@/services/auth.service'
 import { IAuthForm } from '@/types/auth.types'
@@ -9,6 +12,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { SubmitHandler } from 'react-hook-form/dist/types'
 import { toast } from 'sonner'
+import '../globals.scss'
 
 export function Auth() {
 	const { register, handleSubmit, reset } = useForm<IAuthForm>({
@@ -40,9 +44,30 @@ export function Auth() {
 				className='w-1/4 m-auto shadow bg-sidebar rounded-lg p-layout'
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<div className='flex items-center gap-5 justify-center'>
-                    
-                </div>
+				<Heading title='Auth' />
+
+				<Field
+					id='email'
+					label='Email'
+					placeholder='Enter Email'
+					type='email'
+					extra='mb-4'
+					{...register('email', { required: 'Email is required!' })}
+				/>
+
+				<Field
+					id='password'
+					label='Password'
+					placeholder='Enter password'
+					type='password'
+					extra='mb-6'
+					{...register('password', { required: 'Password is required!' })}
+				/>
+
+				<div className='flex items-center gap-5 justify-center'></div>
+
+				<Button onClick={() => setIsLoginForm(true)}>Login</Button>
+				<Button onClick={() => setIsLoginForm(false)}>Register</Button>
 			</form>
 		</div>
 	)
