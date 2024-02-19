@@ -64,10 +64,10 @@ export function Auth() {
 					{...register('password', { required: 'Password is required!' })}
 				/>
 
-				<div className='flex items-center gap-5 justify-center'></div>
-
-				<Button onClick={() => setIsLoginForm(true)}>Login</Button>
-				<Button onClick={() => setIsLoginForm(false)}>Register</Button>
+				<div className='flex items-center gap-5 justify-center'>
+					<Button onClick={() => setIsLoginForm(true)}>Login</Button>
+					<Button onClick={() => setIsLoginForm(false)}>Register</Button>
+				</div>
 			</form>
 		</div>
 	)
