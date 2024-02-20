@@ -60,7 +60,6 @@ export function Settings() {
 							{...register('workInterval', { valueAsNumber: true })}
 							extra='mb-4'
 						/>
-
 						<Field
 							id='breakInterval'
 							label='Break interval (min.):'

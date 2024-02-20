@@ -1,18 +1,18 @@
 import { Heading } from '@/components/ui/Heading'
 import { NO_INDEX_PAGE } from '@/constants/ceo.constants'
 import { Metadata } from 'next'
-import { Settings } from './Settings'
+import { TasksView } from './TasksView'
 
 export const metadata: Metadata = {
-	title: 'Settings',
+	title: 'Tasks',
 	...NO_INDEX_PAGE,
 }
 
-export default function SettingsPage() {
+export default function TasksPage() {
 	return (
 		<div>
-			<Heading title='Settings' />
-			<Settings />
+			<Heading title='Tasks' />
+			<TasksView />
 		</div>
 	)
 }
