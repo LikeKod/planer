@@ -1,3 +1,5 @@
+'use client'
+
 import Loader from '@/components/ui/Loader'
 import { useProfile } from '@/hooks/useProfile'
 
