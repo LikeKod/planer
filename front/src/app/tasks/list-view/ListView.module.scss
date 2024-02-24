@@ -21,7 +21,7 @@
 
     .parentsWrapper {
         .colHeading {
-            @apply hover: bg-transparent;
+            @apply hover:bg-transparent;
             background-color: #0e0f0f;
 
             >div {
@@ -47,7 +47,7 @@
             }
 
             >div>span {
-                .grid {
+                .grip {
                     @apply opacity-20 transition-opacity -ml-3 -mr-1;
 
                     &:hover,
