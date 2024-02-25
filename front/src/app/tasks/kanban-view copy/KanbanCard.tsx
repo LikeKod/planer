@@ -17,7 +17,7 @@ interface IKanbanRow {
 	setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>
 }
 
-export function KanbanRow({ item, setItems }: IKanbanRow) {
+export function KanbanCard({ item, setItems }: IKanbanRow) {
 	const { deleteTask, isDeletePending } = useDeleteTask()
 
 	const { register, control, watch } = useForm<TypeTaskFormState>({

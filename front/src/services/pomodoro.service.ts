@@ -1,8 +1,8 @@
 import { axiosWithAuth } from '@/api/interceptors'
 import {
-    IPomodoroSessionResponse,
-    TypePomodoroRoundState,
-    TypePomodoroSessionState
+	IPomodoroSessionResponse,
+	TypePomodoroRoundState,
+	TypePomodoroSessionState
 } from '@/types/pomodoro.types'
 
 class PomodoroService {
@@ -41,3 +41,5 @@ class PomodoroService {
 		return response
 	}
 }
+
+export const pomodoroService = new PomodoroService()
