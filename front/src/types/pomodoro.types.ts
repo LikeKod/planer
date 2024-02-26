@@ -1,4 +1,4 @@
-import { IBase } from './root.types'
+import type { IBase } from './root.types'
 
 export interface IPomodoroRoundResponse extends IBase {
 	isCompleted?: boolean
@@ -7,7 +7,7 @@ export interface IPomodoroRoundResponse extends IBase {
 
 export interface IPomodoroSessionResponse extends IBase {
 	isCompleted?: boolean
-	rounds?: IPomodoroRoundResponse
+	rounds?: IPomodoroRoundResponse[]
 }
 
 export type TypePomodoroSessionState = Partial<
