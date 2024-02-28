@@ -23,7 +23,7 @@ export function useTodaySession({setActiveRound, setSecondsLeft}: ITimerState) {
 
 	useEffect(() => {
 		if(isSuccess && rounds) {
-			const activeRound = rounds.find((round: { isCompleted: any }) => !round.isCompleted)
+			const activeRound = rounds.find(round => !round.isCompleted)
 			setActiveRound(activeRound)
 
 			if(activeRound && activeRound?.totalSeconds !== 0){

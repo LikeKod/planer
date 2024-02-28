@@ -1,7 +1,7 @@
 import { IPomodoroRoundResponse } from '@/types/pomodoro.types'
 import cn from 'clsx'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import styles from './PomodoroRounds.module.scss'
+import styles from './PomodoroRound.module.scss'
 
 interface IPomodoroRounds {
 	rounds: IPomodoroRoundResponse[] | undefined
